@@ -1,22 +1,17 @@
 package com.codecool.mightytextadventure.logic;
 
+import com.codecool.mightytextadventure.data.Area;
+
 public class Player {
     private String name;
     private int HP = 100;
-    private boolean magicWand;
-    private int potion;
+    private boolean magicWand = false;
+    private int potion = 0;
+    private Area actualArea;
 
-    public Player(String name, int HP, boolean magicWand, int potion) {
+    public Player(String name, Area actualArea) {
         this.name = name;
-        this.HP = HP;
-        this.magicWand = magicWand;
-        this.potion = potion;
-    }
-
-    public Player(String name, boolean magicWand, int potion) {
-        this.name = name;
-        this.magicWand = magicWand;
-        this.potion = potion;
+        this.actualArea = actualArea;
     }
 
     public Player(boolean magicWand) {
@@ -37,5 +32,9 @@ public class Player {
 
     public int getPotion() {
         return potion;
+    }
+
+    public Area getActualArea() {
+        return actualArea;
     }
 }

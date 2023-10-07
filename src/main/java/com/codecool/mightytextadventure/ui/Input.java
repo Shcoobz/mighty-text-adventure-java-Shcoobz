@@ -22,15 +22,16 @@ public class Input {
             displayHelp();
             return getInputFromUser(); // after displaying help, ask for input again
         }
-        System.out.println("please enter the name of player: ");
-        String name = scanner.nextLine();
 
-        Player player = new Player(name, 100, false, 0);
 
 
         return input;
     }
-    }
+public String getNameFromUser(){
+    System.out.println("please enter the name of player: ");
+    String name = scanner.nextLine();
+    return name;
+}
 
 
 

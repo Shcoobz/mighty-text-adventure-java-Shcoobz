@@ -2,6 +2,7 @@ package com.codecool.mightytextadventure;
 
 import com.codecool.mightytextadventure.data.Area;
 import com.codecool.mightytextadventure.logic.Game;
+import com.codecool.mightytextadventure.logic.Player;
 import com.codecool.mightytextadventure.ui.Display;
 import com.codecool.mightytextadventure.ui.Input;
 
@@ -14,8 +15,8 @@ public class Application {
 
     Area[] areas = loadAreas();
     setupAreaConnections(areas);
-
-    Game game = new Game(areas, input, display);
+    Player player = new Player(input.getNameFromUser(), areas[0]);
+    Game game = new Game(areas, input, display, player);
     game.run();
 
     display.printMessage("Exiting from Mighty Text Adventure!");

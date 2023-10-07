@@ -8,11 +8,13 @@ public class Game {
     private final Area[] areas;
     private final Input input;
     private final Display display;
+    private final Player player;
 
-    public Game(Area[] areas, Input input, Display display) {
+    public Game(Area[] areas, Input input, Display display, Player player) {
         this.areas = areas;
         this.input = input;
         this.display = display;
+        this.player = player;
     }
 
 
@@ -24,7 +26,10 @@ public class Game {
     }
 
     private boolean step() {
-        display.printMessage("Steps");
+        for (var action : player.getActualArea().getAvailableActions()) {
+            display.printMessage(action);
+        }
+
         return true;
     }
 }
