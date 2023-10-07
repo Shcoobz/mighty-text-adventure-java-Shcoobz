@@ -15,17 +15,15 @@ public class Game {
         this.display = display;
     }
 
-    public void run(boolean trueOrFalse) {
-        boolean isRunning = trueOrFalse;
 
-
+    public void run() {
+        boolean isRunning = true;
         while (isRunning) {
             isRunning = step();
         }
     }
 
     private boolean step() {
-
         display.printMessage("Steps");
         return true;
     }

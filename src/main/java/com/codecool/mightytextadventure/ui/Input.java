@@ -5,16 +5,40 @@ import com.codecool.mightytextadventure.logic.Player;
 import java.util.Scanner;
 
 public class Input {
+    private Scanner scanner;
+
+    public Input() {
+        this.scanner = new Scanner(System.in);
+    }
 
     public String getInputFromUser(){
-        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine().trim();
+
+        // make input case-insensitive by converting it to lowercase
+        input = input.toLowerCase();
+
+        // check for 'help' or 'h' & provide the help information
+        if ("help".equals(input) || "h".equals(input)) {
+            displayHelp();
+            return getInputFromUser(); // after displaying help, ask for input again
+        }
         System.out.println("please enter the name of player: ");
         String name = scanner.nextLine();
 
         Player player = new Player(name, 100, false, 0);
 
 
-        return "";
+        return input;
+    }
     }
 
+
+
+    private void displayHelp() {
+        System.out.println("HELP INFORMATION:");
+        System.out.println("- Type the action you want to take (e.g., 'move to Room 1').");
+        System.out.println("- Actions are case-insensitive.");
+        System.out.println("- Type 'h' or 'help' for this help message.");
+        System.out.println("- More...?");
+    }
 }
