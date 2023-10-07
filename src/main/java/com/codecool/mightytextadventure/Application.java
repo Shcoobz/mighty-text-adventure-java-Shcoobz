@@ -15,7 +15,7 @@ public class Application {
         Area[] areas = loadAreas();
 
         Game game = new Game(areas, input, display);
-        game.run();
+        game.run(true);
 
         display.printMessage("Exiting from Mighty Text Adventure!");
     }
