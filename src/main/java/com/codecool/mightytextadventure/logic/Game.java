@@ -15,6 +15,7 @@ public class Game {
         this.display = display;
     }
 
+
     public void run() {
         boolean isRunning = true;
         while (isRunning) {
