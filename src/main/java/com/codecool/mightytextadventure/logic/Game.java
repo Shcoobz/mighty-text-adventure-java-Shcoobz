@@ -10,6 +10,8 @@ public class Game {
     private final Display display;
     private final Player player;
 
+    boolean isRunning = true;
+
     public Game(Area[] areas, Input input, Display display, Player player) {
         this.areas = areas;
         this.input = input;
@@ -19,9 +21,11 @@ public class Game {
 
 
     public void run() {
-        boolean isRunning = true;
+
         while (isRunning) {
-            isRunning = step();
+            display.printAreaDescription(player.getActualArea().getDescription());
+            waitForUserInput();
+
         }
     }
 
@@ -31,5 +35,25 @@ public class Game {
         }
 
         return true;
+    }
+
+/*-----------stop till get user Input----------*/
+    /* We can change waitForUserInput to step as well,
+    but since the code was working correctly, I didn't change anything*/
+    private void waitForUserInput() {
+        display.printAvailableActions(player.getActualArea().getAvailableActions());
+        String userInput = input.getInputFromUser().toLowerCase();
+
+        if (userInput.equals("quit")) {
+            display.printMessage("Exiting the game.");
+            isRunning = false;
+        } else {
+            Area nextArea = player.getActualArea().getAreaForAction(userInput);
+            if (nextArea != null) {
+                player.setActualArea(nextArea);
+            } else {
+                display.printInvalidAction();
+            }
+        }
     }
 }

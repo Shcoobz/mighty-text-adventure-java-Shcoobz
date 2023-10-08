@@ -34,6 +34,9 @@ public class Player {
         return potion;
     }
 
+    public void setActualArea(Area area) {
+        this.actualArea = area;
+    }
     public Area getActualArea() {
         return actualArea;
     }
