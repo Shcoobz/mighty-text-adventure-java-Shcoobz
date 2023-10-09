@@ -24,8 +24,10 @@ public class Display {
 
   public void printAvailableActions(List<String> actions) {
     System.out.println("Available actions:");
+    int index = 1;
     for (String action : actions) {
-      System.out.println("- " + action);
+      System.out.println(index + ". " + action);
+      index++;
     }
   }
 
