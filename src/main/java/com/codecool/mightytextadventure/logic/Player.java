@@ -8,10 +8,12 @@ public class Player {
     private boolean magicWand = false;
     private int potion = 0;
     private Area actualArea;
+    private int attackStrength;
 
     public Player(String name, Area actualArea) {
         this.name = name;
         this.actualArea = actualArea;
+        this.attackStrength = 10;
     }
 
     public Player(boolean magicWand) {
@@ -39,5 +41,31 @@ public class Player {
     }
     public Area getActualArea() {
         return actualArea;
+    }
+
+    public void takeDamage(int damage) {
+        HP -= damage;
+        if (HP < 0) {
+            HP = 0;
+        }
+    }
+
+    public void healWithPotion() {
+        if (potion > 0) {
+            HP += 50;
+            potion--;
+            if (HP > 100) {
+                HP = 100;
+            }
+        }
+    }
+
+    public int getAttackStrength() {
+
+        if (magicWand) {
+            return 20;
+        } else {
+            return 10;
+        }
     }
 }
