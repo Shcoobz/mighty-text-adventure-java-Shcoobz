@@ -11,3 +11,5 @@ n
 >src/main/java/com/codecool/mightytextadventure/logic/Game.java,1/9/19dc50e9737cabe4f059f63f97df791d5d93c3bd
 l
 <src/main/java/com/codecool/mightytextadventure/ui/Input.java,0/9/091efa4c9e23daa3913cf8a70fd247010bc6b2f0
+p
+@src/main/java/com/codecool/mightytextadventure/logic/Player.java,f/4/f4e2659342b4dbccb3fa4384f40fdd1b8577d81f
