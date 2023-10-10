@@ -4,6 +4,8 @@ import com.codecool.mightytextadventure.data.Area;
 import com.codecool.mightytextadventure.ui.Display;
 import com.codecool.mightytextadventure.ui.Input;
 
+import java.util.List;
+
 public class Game {
     private final Area[] areas;
     private final Input input;
@@ -44,16 +46,31 @@ public class Game {
         display.printAvailableActions(player.getActualArea().getAvailableActions());
         String userInput = input.getInputFromUser().toLowerCase();
 
+        List<String> availableActions = player.getActualArea().getAvailableActions();
+        String chosenAction = null;
+
+        // check if user input is a number and maps to an action
+        try {
+            int actionIndex = Integer.parseInt(userInput) - 1; // convert to 0-based index
+            if (actionIndex >= 0 && actionIndex < availableActions.size()) {
+                chosenAction = availableActions.get(actionIndex);
+            }
+        } catch (NumberFormatException e) {
+            // not a number, ignore and continue
+        }
+
         if (userInput.equals("quit")) {
             display.printMessage("Exiting the game.");
             isRunning = false;
-        } else {
-            Area nextArea = player.getActualArea().getAreaForAction(userInput);
+        } else if (chosenAction != null) {
+            Area nextArea = player.getActualArea().getAreaForAction(chosenAction);
             if (nextArea != null) {
                 player.setActualArea(nextArea);
             } else {
                 display.printInvalidAction();
             }
+        } else {
+            display.printInvalidAction();
         }
     }
 }
