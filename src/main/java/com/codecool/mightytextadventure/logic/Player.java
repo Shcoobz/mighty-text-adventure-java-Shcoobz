@@ -50,6 +50,10 @@ public class Player {
         }
     }
 
+    public int addAPotion(){
+        return ++potion;
+    }
+
     public void healWithPotion() {
         if (potion > 0) {
             HP += 50;
