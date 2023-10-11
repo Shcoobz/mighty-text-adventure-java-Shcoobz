@@ -1,6 +1,8 @@
 package com.codecool.mightytextadventure.logic;
 
 import com.codecool.mightytextadventure.data.Area;
+import com.codecool.mightytextadventure.data.EnemyInfo;
+import com.codecool.mightytextadventure.data.EnemyType;
 import com.codecool.mightytextadventure.ui.Display;
 import com.codecool.mightytextadventure.ui.Input;
 
@@ -39,7 +41,7 @@ public class Game {
         return true;
     }
 
-/*-----------stop till get user Input----------*/
+    /*-----------stop till get user Input----------*/
     /* We can change waitForUserInput to step as well,
     but since the code was working correctly, I didn't change anything*/
     private void waitForUserInput() {
@@ -72,5 +74,24 @@ public class Game {
         } else {
             display.printInvalidAction();
         }
+
+        EnemyType enemyType = EnemyType.randomEnemyName();
+        String enemyName = enemyType.getName();
+        int enemyHP = enemyType.getHp();
+        int enemyAttackStrength = enemyType.getAttackStrength();
+        Enemy enemy = new Enemy(enemyName, enemyHP, enemyAttackStrength);
+        Battle battle = new Battle(player, enemy);
+
+        if (userInput.equals("battle")) {
+            battle.startBattle();
+
+            int playerHP = player.getHP();
+
+            if (playerHP == 0) {
+                isRunning = false;
+            }
+        }
+        ;
+
     }
 }

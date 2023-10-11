@@ -17,12 +17,21 @@ public class Battle {
             int playerDamage = player.getAttackStrength();
             int enemyDamage = enemy.getAttackStrength();
 
-/*------------ Spieler greift den Gegner an ----------*/
+
+            /*------------ Heilung der Player ----------*/
+            if (player.getHP() < 60) {
+                player.healWithPotion();
+                int PN = player.getPotion();
+                display.printMessage("--->>> the remaining potions are : " + Integer.toString(PN) + "pieces");
+            }
+            ;
+
+            /*------------ Spieler greift den Gegner an ----------*/
             enemy.takeDamage(playerDamage);
             display.printMessage(player.getName() + " greift " + enemy.getName() + " an und fügt " + playerDamage + " Schaden zu.");
 
 
-/*------------ Gegner greift den Spieler an ----------*/
+            /*------------ Gegner greift den Spieler an ----------*/
             player.takeDamage(enemyDamage);
             display.printMessage(enemy.getName() + " greift " + player.getName() + " an und fügt " + enemyDamage + " Schaden zu.");
 

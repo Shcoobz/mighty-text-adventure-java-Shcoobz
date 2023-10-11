@@ -1,5 +1,7 @@
 package com.codecool.mightytextadventure.logic;
 
+import com.codecool.mightytextadventure.data.EnemyType;
+
 public class Enemy {
     private String name;
     private int HP;
@@ -29,5 +31,13 @@ public class Enemy {
             HP = 0;
         }
     }
+
+/*    public static String randomEnemyName111(){
+        Random random = new Random();
+        int randomNumber = random.nextInt(4);
+        String[] enemyNames = {"DEATH_EATER", "DEMENTOR", "BASILISK", "ACROMANTULA"};
+        return enemyNames[randomNumber];
+   };*/
+
 }
 

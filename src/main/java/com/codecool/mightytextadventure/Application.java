@@ -33,7 +33,6 @@ public class Application {
     areas[6] = new Area("Room 6");
     return areas;
   }
-
   private static void setupAreaConnections(Area[] areas) {
     areas[0].addConnection("move to Room 1", areas[1]);
     areas[1].addConnection("move back to Start room", areas[0]);
