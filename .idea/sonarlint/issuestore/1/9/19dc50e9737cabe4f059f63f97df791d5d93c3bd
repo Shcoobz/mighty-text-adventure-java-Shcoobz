@@ -1,9 +1,7 @@
 
-D
-java:S2189""Add an end condition to this loop.(ÓŠ¢ùÿÿÿÿ8Ûµ†Ñ°1
-Y
-java:S2589"7Remove this expression which always evaluates to "true"(ÓŠ¢ùÿÿÿÿ8ãµ†Ñ°1
-?
-java:S1068")Remove this unused "areas" private field.(ãüŸµ
-E
-java:S1068	")Remove this unused "input" private field.(€Ú‡8¸¡†Ñ°1
+X	java:S125>"<This block of commented-out lines of code should be removed.(Õô¿Ö8ÅšÈÒ±1
+F
+java:S1068
+")Remove this unused "areas" private field.(ãüŸµ8¨Ï¤Ä±1
+F
+java:S1144!")Remove this unused private "step" method.(âÓÒ¢8ô†Ž±1

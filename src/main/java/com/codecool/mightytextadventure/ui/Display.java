@@ -11,7 +11,7 @@ public class Display {
   }
 
   public void printAreaDescription(String description) { // from Area
-    System.out.println("AREA: " + description);
+    System.out.println("\nNARRATOR: " + description);
   }
 
   public void printWinMessage() {
@@ -23,7 +23,7 @@ public class Display {
   }
 
   public void printAvailableActions(List<String> actions) {
-    System.out.println("Available actions:");
+    System.out.println("\nAvailable actions:");
     int index = 1;
     for (String action : actions) {
       System.out.println(index + ". " + action);

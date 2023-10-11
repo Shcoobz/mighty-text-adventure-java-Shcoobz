@@ -11,3 +11,5 @@ m
 =src/main/java/com/codecool/mightytextadventure/data/Area.java,f/0/f01e7d980cfd1078bf9d220f85ee1c0025bddae0
 n
 >src/main/java/com/codecool/mightytextadventure/logic/Game.java,1/9/19dc50e9737cabe4f059f63f97df791d5d93c3bd
+p
+@src/main/java/com/codecool/mightytextadventure/logic/Player.java,f/4/f4e2659342b4dbccb3fa4384f40fdd1b8577d81f
