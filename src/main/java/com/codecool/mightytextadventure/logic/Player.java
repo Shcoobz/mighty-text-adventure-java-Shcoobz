@@ -5,8 +5,8 @@ import com.codecool.mightytextadventure.data.Area;
 public class Player {
     private String name;
     private int HP = 100;
-    private boolean magicWand = false;
-    private int potion = 0;
+    private boolean magicWand = true;
+    private int potion = 10;
     private Area actualArea;
     private int attackStrength;
 
@@ -55,7 +55,7 @@ public class Player {
     }
 
     public void healWithPotion() {
-        if (potion > 0) {
+        if (potion > 0 && HP < 60) {
             HP += 50;
             potion--;
             if (HP > 100) {
