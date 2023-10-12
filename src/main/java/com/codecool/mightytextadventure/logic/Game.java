@@ -1,22 +1,23 @@
 package com.codecool.mightytextadventure.logic;
 
 import com.codecool.mightytextadventure.data.Area;
-import com.codecool.mightytextadventure.data.EnemyInfo;
+import com.codecool.mightytextadventure.data.AreaName;
 import com.codecool.mightytextadventure.data.EnemyType;
 import com.codecool.mightytextadventure.ui.Display;
 import com.codecool.mightytextadventure.ui.Input;
 
 import java.util.List;
+import java.util.Map;
 
 public class Game {
-  private final Area[] areas;
+  private final Map<AreaName, Area> areas;
   private final Input input;
   private final Display display;
   private final Player player;
 
   boolean isRunning = true;
 
-  public Game(Area[] areas, Input input, Display display, Player player) {
+  public Game(Map<AreaName, Area> areas, Input input, Display display, Player player) {
     this.areas = areas;
     this.input = input;
     this.display = display;

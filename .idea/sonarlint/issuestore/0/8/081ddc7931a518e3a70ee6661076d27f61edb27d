@@ -1,9 +1,46 @@
 
-e
-java:S1192P"HDefine a constant instead of duplicating this literal "[Leave]" 4 times.(±Ü¡É8ë—¾Ô±1
+f
+java:S1192¼"HDefine a constant instead of duplicating this literal "[Leave]" 4 times.(İÕÖ¡8Œ›û±1
+h
+java:S1192ô"JDefine a constant instead of duplicating this literal "[Go East]" 4 times.(é¢8Ï££û±1
+i
+java:S1192õ"KDefine a constant instead of duplicating this literal "[Go South]" 4 times.(—„Ëí8¬êŸû±1
+h
+java:S1192ö"JDefine a constant instead of duplicating this literal "[Go West]" 4 times.(§Î€•8¬êŸû±1
+n
+java:S1192ó"KDefine a constant instead of duplicating this literal "[Go North]" 4 times.(í¼»ıûÿÿÿÿ8Ó£û±1
+A
+java:S1640-"Convert this Map to an EnumMap.(ĞŠÆ¡ûÿÿÿÿ8›û±1
+<
+java:S1640."Convert this Map to an EnumMap.(ì‰§8›û±1
 T
-java:S1135	"2Complete the task associated to this TODO comment.(ó²Èºÿÿÿÿÿ8ú—¾Ô±1
+java:S1135"2Complete the task associated to this TODO comment.(ó²Èºÿÿÿÿÿ8››û±1
 N
-java:S1135
-"2Complete the task associated to this TODO comment.(‰Ÿd8ú—¾Ô±1
-]	java:S125%"<This block of commented-out lines of code should be removed.(öŠŞÊúÿÿÿÿ8‚˜¾Ô±1
+java:S1135"2Complete the task associated to this TODO comment.(‰Ÿd8››û±1
+O
+java:S1135"2Complete the task associated to this TODO comment.(úÉ¿¾8››û±1
+O
+java:S1135"2Complete the task associated to this TODO comment.(…Ù”—8››û±1
+@
+java:S2119&"Save and re-use this "Random".(šŸ«íøÿÿÿÿ8›û±1
+O
+java:S61261"2Replace this String concatenation with Text block.(·¦Ğğ8 ›û±1
+O
+java:S6126:"2Replace this String concatenation with Text block.(¢‰Êš8 ›û±1
+O
+java:S6126@"2Replace this String concatenation with Text block.(ÍÓĞ¤8 ›û±1
+T
+java:S6126H"2Replace this String concatenation with Text block.(Åùªşÿÿÿÿ8¡›û±1
+T
+java:S6126^"2Replace this String concatenation with Text block.(ª Áüÿÿÿÿ8¡›û±1
+O
+java:S6126e"2Replace this String concatenation with Text block.(ÄìÉÏ8¡›û±1
+T
+java:S6126m"2Replace this String concatenation with Text block.(„ìäÖûÿÿÿÿ8¡›û±1
+O
+java:S6126t"2Replace this String concatenation with Text block.(—ü»8¢›û±1
+T
+java:S6126z"2Replace this String concatenation with Text block.(ÿĞ˜÷ùÿÿÿÿ8¢›û±1
+^	java:S125²"<This block of commented-out lines of code should be removed.(´û—Ãøÿÿÿÿ8¤›û±1
+Y	java:S125Ï"<This block of commented-out lines of code should be removed.(±´Œ8ÛâËû±1
+^	java:S125Œ"<This block of commented-out lines of code should be removed.(ÁùÊÜşÿÿÿÿ8ª›û±1
