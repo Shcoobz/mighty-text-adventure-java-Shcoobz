@@ -2,6 +2,8 @@
 
 package com.codecool.mightytextadventure.ui;
 
+import com.codecool.mightytextadventure.logic.Player;
+
 import java.util.List;
 
 public class Display {
@@ -14,12 +16,12 @@ public class Display {
     System.out.println("\nNARRATOR: " + description);
   }
 
-  public void printWinMessage() {
-    System.out.println("CONGRATULATIONS! YOU WIN!");
+  public void printWinMessage(Player player) {
+    System.out.println("CONGRATULATIONS " + player.getName() + "! YOU WIN!");
   }
 
-  public void printLoseMessage() {
-    System.out.println("GAME OVER! YOU LOST!");
+  public void printLoseMessage(Player player) {
+    System.out.println("\nGAME OVER! " + player.getName() + ", YOU HAVE LOST!");
   }
 
   public void printAvailableActions(List<String> actions) {

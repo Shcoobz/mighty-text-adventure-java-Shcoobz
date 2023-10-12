@@ -14,6 +14,7 @@ public class Game {
   private final Input input;
   private final Display display;
   private final Player player;
+  private int battlesWon = 0;
 
   boolean isRunning = true;
 
@@ -28,21 +29,25 @@ public class Game {
 
     while (isRunning) {
       display.printAreaDescription(player.getActualArea().getDescription());
+
+      if (AreaName.GAME_OVER.equals(player.getActualArea().getAreaName())) {
+        display.printLoseMessage(player);
+        isRunning = false;
+        return;
+      }
+
+      if (AreaName.FIND_FANG.equals(player.getActualArea().getAreaName())) {
+        display.printWinMessage(player);
+        isRunning = false;
+        return;
+      }
+
       waitForUserInput();
-
     }
   }
 
-  private boolean step() {
-    for (var action : player.getActualArea().getAvailableActions()) {
-      display.printMessage(action);
-    }
-
-    return true;
-  }
-
-    /* We can change waitForUserInput to step as well,
-    but since the code was working correctly, I didn't change anything*/
+  /* We can change waitForUserInput to step as well,
+  but since the code was working correctly, I didn't change anything*/
   private void waitForUserInput() {
     display.printAvailableActions(player.getActualArea().getAvailableActions());
     String userInput = input.getInputFromUser().toLowerCase();
@@ -50,48 +55,57 @@ public class Game {
     List<String> availableActions = player.getActualArea().getAvailableActions();
     String chosenAction = null;
 
-        // check if user input is a number and maps to an action
-        try {
-            int actionIndex = Integer.parseInt(userInput) - 1; // convert to 0-based index
-            if (actionIndex >= 0 && actionIndex < availableActions.size()) {
-                chosenAction = availableActions.get(actionIndex);
-            }
-        } catch (NumberFormatException e) {
-            // not a number, ignore and continue
-        }
+    // check if user input is a number and maps to an action
+    try {
+      int actionIndex = Integer.parseInt(userInput) - 1; // convert to 0-based index
+      if (actionIndex >= 0 && actionIndex < availableActions.size()) {
+        chosenAction = availableActions.get(actionIndex);
+      }
+    } catch (NumberFormatException e) {
+      // not a number, ignore and continue
+    }
 
-      if (userInput.equals("quit")) {
-          /*display.printMessage("Exiting the game.");*/
-          display.printLoseMessage();
-          isRunning = false;
-      } else if (chosenAction != null) {
-          Area nextArea = player.getActualArea().getAreaForAction(chosenAction);
-          if (nextArea != null) {
-              player.setActualArea(nextArea);
-          } else {
-              display.printInvalidAction();
-          }
+    if (userInput.equals("quit")) {
+      display.printLoseMessage(player);
+      isRunning = false;
+    } else if (chosenAction != null) {
+      Area nextArea = player.getActualArea().getAreaForAction(chosenAction);
+
+      if (nextArea != null) {
+        player.setActualArea(nextArea);
       } else {
-          display.printInvalidAction();
+        display.printInvalidAction();
+      }
+    } else {
+      display.printInvalidAction();
+    }
+
+    /*-----------Determine player and enemy for battle---------------*/
+    EnemyType enemyType = EnemyType.randomEnemyName();
+    String enemyName = enemyType.getName();
+    int enemyHP = enemyType.getHp();
+    int enemyAttackStrength = enemyType.getAttackStrength();
+    Enemy enemy = new Enemy(enemyName, enemyHP, enemyAttackStrength);
+    Battle battle = new Battle(player, enemy);
+
+    if (userInput.equals("battle")) {
+      //battle.startBattle();
+
+      boolean playerWon = battle.startBattle();
+
+      if (playerWon) {
+        battlesWon++;
+        if (battlesWon >= 3) {
+          player.setActualArea(areas.get(AreaName.FIND_FANG));
+          return;
+        }
       }
 
-      /*-----------Determine player and enemy for battle---------------*/
-        EnemyType enemyType = EnemyType.randomEnemyName();
-        String enemyName = enemyType.getName();
-        int enemyHP = enemyType.getHp();
-        int enemyAttackStrength = enemyType.getAttackStrength();
-        Enemy enemy = new Enemy(enemyName, enemyHP, enemyAttackStrength);
-        Battle battle = new Battle(player, enemy);
+      int playerHP = player.getHP();
 
-        if (userInput.equals("battle")) {
-            battle.startBattle();
-
-            int playerHP = player.getHP();
-
-            if (playerHP == 0) {
-                isRunning = false;
-            }
-        }
-        ;
+      if (playerHP == 0) {
+        isRunning = false;
+      }
+    }
   }
 }

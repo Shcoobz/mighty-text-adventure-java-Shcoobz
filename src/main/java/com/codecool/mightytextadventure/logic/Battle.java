@@ -11,7 +11,7 @@ public class Battle {
         this.enemy = enemy;
     }
 
-    public void startBattle() {
+    public boolean startBattle() {
         Display display = new Display();
         while (player.getHP() > 0 && enemy.getHP() > 0) {
             int playerDamage = player.getAttackStrength();
@@ -40,9 +40,10 @@ public class Battle {
         }
 
         if (player.getHP() <= 0) {
-            display.printLoseMessage();
+            display.printLoseMessage(player);
         } else {
-            display.printWinMessage();
+            display.printWinMessage(player);
         }
+        return false;
     }
 }
