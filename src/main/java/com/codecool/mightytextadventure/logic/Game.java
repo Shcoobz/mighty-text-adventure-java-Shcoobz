@@ -88,6 +88,7 @@ public class Game {
             int playerHP = player.getHP();
 
             if (playerHP == 0) {
+
                 isRunning = false;
             }
         }
