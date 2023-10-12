@@ -15,6 +15,7 @@ import java.util.Random;
 // TODO: add teleport to woods, keyword "woods"
 // TODO: implement back option
 // TODO: add another knock yet again for knock loop
+// TODO: add finding fang -> game win
 
 public class Application {
   public static void main(String[] args) {
@@ -68,8 +69,9 @@ public class Application {
     areas.put(AreaName.SA_CALL_NAME, new Area("\"Hagrid?\" you call out, your voice raised against the rain. Inside, there's rustling, a clink of metal, and a deep\n" +
         "muffled voice. A shadow quickly moves past a lit window."));
 
-    // ========== SA_REASSURING ==========
-    areas.put(AreaName.HUT_INSIDE, new Area("'Hagrid, it's me!' \n" +
+    // TODO: add players name
+    // ========== HUT_INSIDE ==========
+    areas.put(AreaName.HUT_INSIDE, new Area("'Hagrid, it's me, {add player name}!' \n" +
         "\n" +
         "After a pause, Hagrid's tear-filled face appears. \n" +
         "\n" +
@@ -203,11 +205,8 @@ public class Application {
     areas.get(AreaName.SA_CALL_NAME).addConnection("[Knock yet again]", areas.get(AreaName.SA_KNOCK));
 
     // some mistake in next line
-    areas.get(AreaName.SA_CALL_NAME).addConnection("[Reassure him]", areas.get(AreaName.SA_REASSURING));
+    areas.get(AreaName.SA_CALL_NAME).addConnection("[Reassure him]", areas.get(AreaName.HUT_INSIDE));
     areas.get(AreaName.SA_CALL_NAME).addConnection("[Leave]", areas.get(AreaName.GAME_OVER));
-
-    // ========== SA_REASSURING ==========
- /*   areas.get(AreaName.SA_REASSURING).addConnection("[DO X]", areas.get(AreaName.HI_ENTER));*/
 
     // ========== HUT_INSIDE ==========
     areas.get(AreaName.HUT_INSIDE).addConnection("[Enter]", areas.get(AreaName.HI_ENTER));
@@ -267,6 +266,8 @@ public class Application {
     areas.get(AreaName.F_WEST).addConnection("[Go North]", areas.get(AreaName.F_NORTH));
     areas.get(AreaName.F_WEST).addConnection("[Go East]", areas.get(AreaName.F_EAST));
     areas.get(AreaName.F_WEST).addConnection("[Go South]", areas.get(AreaName.F_SOUTH));
+
+    // ========== FINDING_FANG ==========
 
     /* areas.get(AreaName.).addConnection("[]", areas.get(AreaName.)); */
 

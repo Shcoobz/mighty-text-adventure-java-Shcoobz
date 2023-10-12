@@ -6,7 +6,6 @@ public enum AreaName {
   SA_LEAVE,
   SA_KNOCK_AGAIN,
   SA_CALL_NAME,
-  SA_REASSURING,
   HUT_INSIDE,
   HI_ENTER,
   HI_LOOK_AROUND,
