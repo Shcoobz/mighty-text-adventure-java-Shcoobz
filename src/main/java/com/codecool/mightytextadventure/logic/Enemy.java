@@ -31,13 +31,5 @@ public class Enemy {
             HP = 0;
         }
     }
-
-/*    public static String randomEnemyName111(){
-        Random random = new Random();
-        int randomNumber = random.nextInt(4);
-        String[] enemyNames = {"DEATH_EATER", "DEMENTOR", "BASILISK", "ACROMANTULA"};
-        return enemyNames[randomNumber];
-   };*/
-
 }
 

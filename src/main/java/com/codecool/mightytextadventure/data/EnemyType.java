@@ -31,11 +31,5 @@ public enum EnemyType {
         int randomIndex = random.nextInt(enemyTypes.length);
         return enemyTypes[randomIndex];
     };
-
-    public static void main(String[] args){
-        EnemyType X = randomEnemyName();
-        System.out.println(X);
-    }
-
 }
 
