@@ -1,7 +1,6 @@
 
-X	java:S125>"<This block of commented-out lines of code should be removed.(Õô¿Ö8ÅšÈÒ±1
+X	java:S125@"<This block of commented-out lines of code should be removed.(Õô¿Ö8ðœÉÖ±1
+K
+java:S1068")Remove this unused "areas" private field.(µºäÿÿÿÿÿ8òœÉÖ±1
 F
-java:S1068
-")Remove this unused "areas" private field.(ãüŸµ8¨Ï¤Ä±1
-F
-java:S1144!")Remove this unused private "step" method.(âÓÒ¢8ô†Ž±1
+java:S1144#")Remove this unused private "step" method.(âÓÒ¢8òœÉÖ±1
