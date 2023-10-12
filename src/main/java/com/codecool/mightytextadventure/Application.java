@@ -14,7 +14,6 @@ import java.util.Random;
 // TODO: add guit game condition for game over
 // TODO: add teleport to woods, keyword "woods"
 // TODO: implement back option
-// TODO: add another knock yet again for knock loop
 // TODO: add finding fang -> game win
 
 public class Application {
@@ -23,6 +22,7 @@ public class Application {
     Input input = new Input();
 
     display.printMessage("\nStarting Mighty Text Adventure by >>> Master JAVA <<<!");
+    display.printMessage("\nType 'h' for a help message.");
 
     Map<AreaName, Area> areas = loadAreas();
     setupAreaConnections(areas);
@@ -59,7 +59,7 @@ public class Application {
     areas.put(AreaName.SA_LEAVE, new Area("Unsure, you turn from the hut, wrapping your cloak tighter. The path leads to Hogwarts Castle's silhouette. Its windows\n" +
         "glow like distant stars, guiding you. The rhythmic rain accompanies you, invoking memories of the castle's warm\n" +
         "corridors. Soon, Hogwarts stands tall, its walls filled with magical tales. You wonder about future adventures\n" +
-        "within. [GAME OVER]"));
+        "within."));
 
     // ========== SA_KNOCK_AGAIN ==========
     areas.put(AreaName.SA_KNOCK_AGAIN, new Area("With renewed determination, you knock again, louder this time. The sound contrasts with the gentle rain, but soon\n" +
@@ -110,9 +110,7 @@ public class Application {
     // ========== HI_DRINK_ALONE ==========
     areas.put(AreaName.HI_DRINK_ALONE, new Area("You sip your tea in a corner, giving Hagrid space. After moments of quiet, Hagrid speaks:\n" +
         "\n" +
-        "'I think it's best if you leave for now.'\n" +
-        "\n" +
-        "[GAME OVER]"));
+        "'I think it's best if you leave for now.'"));
 
     // ========== HI_HAGRID_ANSWERS ==========
     areas.put(AreaName.HI_HAGRID_ANSWERS, new Area("Hagrid struggles with his words.\n" +
@@ -123,9 +121,7 @@ public class Application {
     // ========== HI_OPTION_KID ==========
     areas.put(AreaName.HI_OPTION_KID, new Area("'Hagrid, I wish I could help, but I'm just a kid.' \n" +
         "\n" +
-        "He understands, appreciating your presence.\n" +
-        "\n" +
-        "[GAME OVER]"));
+        "He understands, appreciating your presence.\n"));
 
     // ========== HI_OPTION_TEACHER ==========
     areas.put(AreaName.HI_OPTION_TEACHER, new Area("You suggest finding a teacher, but Hagrid informs you they're away for a conference."));
@@ -176,9 +172,17 @@ public class Application {
     areas.put(AreaName.F_WEST, new Area(getRandomDescription(forestDescriptions, AreaName.F_WEST)));
 
     // ========== FIND_FANG ==========
+    areas.put(AreaName.FIND_FANG, new Area(AreaName.FIND_FANG, "In the depths of the Forbidden Forest, where the trees were ancient and the sunlight scarce, you heard a faint whimper.\n" +
+        "Following the sound, you discovered a small sunlit clearing where Fang lay, bruised and muddied but mostly unharmed. As\n" +
+        "you approached, his tail wagged weakly, eyes full of relief. After a brief check and reassuring words, you and Fang\n" +
+        "began your journey back to Hagrid, the forest now feeling less daunting with the loyal dog by your side."));
 
     // ========== GAME_OVER ==========
-    areas.put(AreaName.GAME_OVER, new Area("GAME OVER"));
+    areas.put(AreaName.GAME_OVER, new Area(AreaName.GAME_OVER, "Your journey has reached an unexpected crossroads. \n" +
+        "\n" +
+        "Whether by fate's hand or a twist of destiny, this path has ended.\n" +
+        "\n" +
+        "But every end is a new beginning..."));
 
     /* areas.put(AreaName.INFRONT_HUT, new Area("")); */
 

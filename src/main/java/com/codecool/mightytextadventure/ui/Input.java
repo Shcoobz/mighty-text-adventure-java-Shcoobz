@@ -34,7 +34,10 @@ public class Input {
 
   private void displayHelp() {
     System.out.println("HELP INFORMATION:");
-    System.out.println("Type 'h' or 'help' for this help message.");
-    System.out.println("Type 'quit' to exit the game at anytime (progress wil not be saved).");
+    System.out.println("-----------------");
+    System.out.println("Typing 'quit' to exit the game at anytime (progress wil not be saved).");
+    System.out.println("Typing 'battle' will start a battle immediately.");
+    System.out.println("Typing 'woods' will skip most of teh story and teleport you to the forrest entrance.");
+    System.out.println("Typing 'win' will instantly win the game.");
   }
 }

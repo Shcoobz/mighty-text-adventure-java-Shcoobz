@@ -11,55 +11,50 @@ import java.util.Map;
 import java.util.Random;
 
 public class Game {
-    private final Map<AreaName, Area> areas;
-    private final Input input;
-    private final Display display;
-    private final Player player;
+  private final Map<AreaName, Area> areas;
+  private final Input input;
+  private final Display display;
+  private final Player player;
+  private int battlesWon = 0;
 
-    boolean isRunning = true;
+  boolean isRunning = true;
 
-    public Game(Map<AreaName, Area> areas, Input input, Display display, Player player) {
-        this.areas = areas;
-        this.input = input;
-        this.display = display;
-        this.player = player;
+  public Game(Map<AreaName, Area> areas, Input input, Display display, Player player) {
+    this.areas = areas;
+    this.input = input;
+    this.display = display;
+    this.player = player;
+  }
+
+  public void run() {
+
+    while (isRunning) {
+      display.printAreaDescription(player.getActualArea().getDescription());
+
+      if (AreaName.GAME_OVER.equals(player.getActualArea().getAreaName())) {
+        display.printLoseMessage(player);
+        isRunning = false;
+        return;
+      }
+
+      if (AreaName.FIND_FANG.equals(player.getActualArea().getAreaName())) {
+        display.printWinMessage(player);
+        isRunning = false;
+        return;
+      }
+
+      waitForUserInput();
     }
+  }
 
-    public void run() {
+  /* We can change waitForUserInput to step as well,
+  but since the code was working correctly, I didn't change anything*/
+  private void waitForUserInput() {
+    display.printAvailableActions(player.getActualArea().getAvailableActions());
+    String userInput = input.getInputFromUser().toLowerCase();
 
-        while (isRunning) {
-            display.printAreaDescription(player.getActualArea().getDescription());
-            waitForUserInput();
-
-            if (player.getActualArea() == ) {
-                switch (diceRoller()) {
-                    case 1:
-                    case 2:
-                        determinePlayerAndEnemy();
-                        break;
-                }
-            }
-
-
-        }
-    }
-
-    private boolean step() {
-        for (var action : player.getActualArea().getAvailableActions()) {
-            display.printMessage(action);
-        }
-
-        return true;
-    }
-
-    /* We can change waitForUserInput to step as well,
-    but since the code was working correctly, I didn't change anything*/
-    private void waitForUserInput() {
-        display.printAvailableActions(player.getActualArea().getAvailableActions());
-        String userInput = input.getInputFromUser().toLowerCase();
-
-        List<String> availableActions = player.getActualArea().getAvailableActions();
-        String chosenAction = null;
+    List<String> availableActions = player.getActualArea().getAvailableActions();
+    String chosenAction = null;
 
         // check if user input is a number and maps to an action
         try {
@@ -71,20 +66,19 @@ public class Game {
             // not a number, ignore and continue
         }
 
-        if (userInput.equals("quit")) {
-            /*display.printMessage("Exiting the game.");*/
-            display.printLoseMessage();
-            isRunning = false;
-        } else if (chosenAction != null) {
-            Area nextArea = player.getActualArea().getAreaForAction(chosenAction);
-            if (nextArea != null) {
-                player.setActualArea(nextArea);
-            } else {
-                display.printInvalidAction();
-            }
-        } else {
-            display.printInvalidAction();
-        }
+    if (userInput.equals("quit")) {
+      display.printLoseMessage(player);
+      isRunning = false;
+    } else if (chosenAction != null) {
+      Area nextArea = player.getActualArea().getAreaForAction(chosenAction);
+
+      if (nextArea != null) {
+        player.setActualArea(nextArea);
+      } else {
+        display.printInvalidAction();
+      }
+    } else {
+      display.printInvalidAction();
     }
 
     /*-----------Determine player and enemy for battle---------------*/
@@ -96,20 +90,25 @@ public class Game {
         Enemy enemy = new Enemy(enemyName, enemyHP, enemyAttackStrength);
         Battle battle = new Battle(player, enemy);
 
-        battle.startBattle();
+    if (userInput.equals("battle")) {
+      //battle.startBattle();
 
-        int playerHP = player.getHP();
+      boolean playerWon = battle.startBattle();
 
-        if (playerHP == 0) {
-            isRunning = false;
-
+      if (playerWon) {
+        battlesWon++;
+        if (battlesWon >= 3) {
+          player.setActualArea(areas.get(AreaName.FIND_FANG));
+          return;
         }
-    }
+      }
 
-    public static int diceRoller() {
-        Random random = new Random();
-        return random.nextInt(6) + 1;
-    }
+            int playerHP = player.getHP();
 
-
+            if (playerHP == 0) {
+                isRunning = false;
+            }
+        }
+        ;
+  }
 }
