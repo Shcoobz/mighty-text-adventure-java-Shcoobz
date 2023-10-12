@@ -1,10 +1,12 @@
 package com.codecool.mightytextadventure.logic;
 
+import com.codecool.mightytextadventure.data.AreaName;
 import com.codecool.mightytextadventure.ui.Display;
 
 public class Battle {
     private Player player;
     private Enemy enemy;
+
 
     public Battle(Player player, Enemy enemy) {
         this.player = player;

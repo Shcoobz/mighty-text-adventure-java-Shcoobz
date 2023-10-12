@@ -166,16 +166,13 @@ public class Application {
     });
 
     // ========== F_DIRECTIONS ==========
-    areas.put(AreaName.F_NORTH, new Area(getRandomDescription(forestDescriptions, AreaName.F_NORTH)));
-    areas.put(AreaName.F_EAST, new Area(getRandomDescription(forestDescriptions, AreaName.F_EAST)));
-    areas.put(AreaName.F_SOUTH, new Area(getRandomDescription(forestDescriptions, AreaName.F_SOUTH)));
-    areas.put(AreaName.F_WEST, new Area(getRandomDescription(forestDescriptions, AreaName.F_WEST)));
+    areas.put(AreaName.F_NORTH, new Area(AreaName.F_NORTH, getRandomDescription(forestDescriptions, AreaName.F_NORTH)));
+    areas.put(AreaName.F_EAST, new Area(AreaName.F_EAST, getRandomDescription(forestDescriptions, AreaName.F_EAST)));
+    areas.put(AreaName.F_SOUTH, new Area(AreaName.F_SOUTH, getRandomDescription(forestDescriptions, AreaName.F_SOUTH)));
+    areas.put(AreaName.F_WEST, new Area(AreaName.F_WEST, getRandomDescription(forestDescriptions, AreaName.F_WEST)));
 
     // ========== FIND_FANG ==========
-    areas.put(AreaName.FIND_FANG, new Area(AreaName.FIND_FANG, "In the depths of the Forbidden Forest, where the trees were ancient and the sunlight scarce, you heard a faint whimper.\n" +
-        "Following the sound, you discovered a small sunlit clearing where Fang lay, bruised and muddied but mostly unharmed. As\n" +
-        "you approached, his tail wagged weakly, eyes full of relief. After a brief check and reassuring words, you and Fang\n" +
-        "began your journey back to Hagrid, the forest now feeling less daunting with the loyal dog by your side."));
+    areas.put(AreaName.FIND_FANG, new Area(AreaName.FIND_FANG, " "));
 
     // ========== GAME_OVER ==========
     areas.put(AreaName.GAME_OVER, new Area(AreaName.GAME_OVER, "Your journey has reached an unexpected crossroads. \n" +

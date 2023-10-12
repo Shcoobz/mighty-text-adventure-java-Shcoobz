@@ -36,11 +36,11 @@ public class Game {
         return;
       }
 
-      if (AreaName.FIND_FANG.equals(player.getActualArea().getAreaName())) {
+ /*     if (AreaName.FIND_FANG.equals(player.getActualArea().getAreaName())) {
         display.printWinMessage(player);
         isRunning = false;
         return;
-      }
+      }*/
 
       waitForUserInput();
     }
@@ -97,6 +97,7 @@ public class Game {
         battlesWon++;
         if (battlesWon >= 3) {
           player.setActualArea(areas.get(AreaName.FIND_FANG));
+          isRunning = false;
           return;
         }
       }
