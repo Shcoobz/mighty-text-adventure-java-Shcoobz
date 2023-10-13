@@ -7,8 +7,8 @@ import java.util.Map;
 
 public class Area {
   private AreaName areaName;
-  private String description;
-  private Map<String, Area> connectedAreas;
+  private final String description;
+  private final Map<String, Area> connectedAreas;
 
   public AreaName getAreaName() {
     return this.areaName;
