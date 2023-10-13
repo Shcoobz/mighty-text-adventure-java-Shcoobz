@@ -166,10 +166,10 @@ public class Application {
     });
 
     // ========== F_DIRECTIONS ==========
-    areas.put(AreaName.F_NORTH, new Area(getRandomDescription(forestDescriptions, AreaName.F_NORTH)));
-    areas.put(AreaName.F_EAST, new Area(getRandomDescription(forestDescriptions, AreaName.F_EAST)));
-    areas.put(AreaName.F_SOUTH, new Area(getRandomDescription(forestDescriptions, AreaName.F_SOUTH)));
-    areas.put(AreaName.F_WEST, new Area(getRandomDescription(forestDescriptions, AreaName.F_WEST)));
+    areas.put(AreaName.F_NORTH, new Area(AreaName.F_NORTH, getRandomDescription(forestDescriptions, AreaName.F_NORTH)));
+    areas.put(AreaName.F_EAST, new Area(AreaName.F_EAST, getRandomDescription(forestDescriptions, AreaName.F_EAST)));
+    areas.put(AreaName.F_SOUTH, new Area(AreaName.F_SOUTH, getRandomDescription(forestDescriptions, AreaName.F_SOUTH)));
+    areas.put(AreaName.F_WEST, new Area(AreaName.F_WEST,getRandomDescription(forestDescriptions, AreaName.F_WEST)));
 
     // ========== FIND_FANG ==========
     areas.put(AreaName.FIND_FANG, new Area(AreaName.FIND_FANG, "In the depths of the Forbidden Forest, where the trees were ancient and the sunlight scarce, you heard a faint whimper.\n" +

@@ -1,10 +1,14 @@
 package com.codecool.mightytextadventure.logic;
 
+import com.codecool.mightytextadventure.data.Area;
+import com.codecool.mightytextadventure.data.AreaName;
+import com.codecool.mightytextadventure.data.EnemyType;
 import com.codecool.mightytextadventure.ui.Display;
 
 public class Battle {
     private Player player;
     private Enemy enemy;
+    private int battlesWon = 0;
 
     public Battle(Player player, Enemy enemy) {
         this.player = player;
@@ -47,4 +51,38 @@ public class Battle {
         }
         return false;
     }
+
+    /*-----------Determine player and enemy for battle---------------*/
+
+
+    public boolean determinePlayerAndEnemy(Game game) {
+        EnemyType enemyType = EnemyType.randomEnemyName();
+        String enemyName = enemyType.getName();
+        int enemyHP = enemyType.getHp();
+        int enemyAttackStrength = enemyType.getAttackStrength();
+        Enemy enemy = new Enemy(enemyName, enemyHP, enemyAttackStrength);
+        this.enemy = enemy;
+
+        boolean playerWon = startBattle();
+
+        if (playerWon) {
+            battlesWon++;
+            if (battlesWon >= 3) {
+                player.setActualArea(new Area(AreaName.FIND_FANG, "Find Fang Description"));
+                return true;
+            }
+        }
+
+        int playerHP = player.getHP();
+
+        if (playerHP == 0) {
+            game.endGame();
+        }
+
+        return false;
+    }
+
+
 }
+
+
