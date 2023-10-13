@@ -12,6 +12,11 @@ import java.util.Map;
 
 public class AreaDescription {
 
+  // private constructor to prevent instantiation
+  private AreaDescription() {
+    throw new AssertionError("Cannot instantiate WayToForrest class");
+  }
+
   public static void loadStart(Map<AreaName, Area> areas) {
     StartingArea.loadStartingArea(areas);
     StartingArea.loadSAKnocking(areas);

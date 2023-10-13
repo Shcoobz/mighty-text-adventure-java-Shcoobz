@@ -4,6 +4,11 @@ import java.util.Map;
 
 public class AreaConnections {
 
+  // private constructor to prevent instantiation
+  private AreaConnections() {
+    throw new AssertionError("Cannot instantiate WayToForrest class");
+  }
+
   public static void setupStart(Map<AreaName, Area> areas) {
     // ========== STARTING AREA ==========
     areas.get(AreaName.STARTING_AREA).addConnection("[Knock]", areas.get(AreaName.SA_KNOCK));
