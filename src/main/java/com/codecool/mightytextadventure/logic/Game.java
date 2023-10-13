@@ -36,11 +36,11 @@ public class Game {
         return;
       }
 
- /*     if (AreaName.FIND_FANG.equals(player.getActualArea().getAreaName())) {
+      if (AreaName.FIND_FANG.equals(player.getActualArea().getAreaName())) {
         display.printWinMessage(player);
         isRunning = false;
         return;
-      }*/
+      }
 
       waitForUserInput();
     }
@@ -65,7 +65,35 @@ public class Game {
       // not a number, ignore and continue
     }
 
-    if (userInput.equals("quit")) {
+    switch (userInput) {
+      case "quit":
+        display.printLoseMessage(player);
+        isRunning = false;
+        break;
+
+      case "win":
+        player.setActualArea(areas.get(AreaName.FIND_FANG));
+        break;
+
+      case "woods":
+        player.setActualArea(areas.get(AreaName.FORREST_ENTER));
+        break;
+
+      default:
+        if (chosenAction != null) {
+          Area nextArea = player.getActualArea().getAreaForAction(chosenAction);
+          if (nextArea != null) {
+            player.setActualArea(nextArea);
+          } else {
+            display.printInvalidAction();
+          }
+        } else {
+          display.printInvalidAction();
+        }
+        break;
+    }
+
+/*    if (userInput.equals("quit")) {
       display.printLoseMessage(player);
       isRunning = false;
     } else if (chosenAction != null) {
@@ -78,7 +106,7 @@ public class Game {
       }
     } else {
       display.printInvalidAction();
-    }
+    }*/
 
     /*-----------Determine player and enemy for battle---------------*/
     EnemyType enemyType = EnemyType.randomEnemyName();

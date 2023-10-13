@@ -15,3 +15,9 @@ p
 @src/main/java/com/codecool/mightytextadventure/logic/Player.java,f/4/f4e2659342b4dbccb3fa4384f40fdd1b8577d81f
 q
 Asrc/main/java/com/codecool/mightytextadventure/data/AreaName.java,5/5/55df478aad53660b45a1937e6fb924dc34d98d66
+r
+Bsrc/main/java/com/codecool/mightytextadventure/data/EnemyInfo.java,0/3/03f717e63c68c6ec088ab5a08ba50e1a64749a76
+r
+Bsrc/main/java/com/codecool/mightytextadventure/data/EnemyType.java,3/1/314d2c84d869ccb0d8fe5c101e3798fd05f03d42
+p
+@src/main/java/com/codecool/mightytextadventure/logic/Battle.java,5/4/547eb31c4973602daa8c45ae19ee540a199c2175
