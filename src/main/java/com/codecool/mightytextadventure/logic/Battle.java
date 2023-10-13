@@ -30,7 +30,7 @@ public class Battle {
                     display.printMessage("--->>> the remaining potions are : " + Integer.toString(potionNumber) + " pieces");
                 }
             }
-            ;
+
 
             /*------------ Spieler greift den Gegner an ----------*/
             enemy.takeDamage(playerDamage);
@@ -53,15 +53,12 @@ public class Battle {
     }
 
     /*-----------Determine player and enemy for battle---------------*/
-
-
     public boolean determinePlayerAndEnemy(Game game) {
         EnemyType enemyType = EnemyType.randomEnemyName();
         String enemyName = enemyType.getName();
         int enemyHP = enemyType.getHp();
         int enemyAttackStrength = enemyType.getAttackStrength();
-        Enemy enemy = new Enemy(enemyName, enemyHP, enemyAttackStrength);
-        this.enemy = enemy;
+        this.enemy = new Enemy(enemyName, enemyHP, enemyAttackStrength);
 
         boolean playerWon = startBattle();
 

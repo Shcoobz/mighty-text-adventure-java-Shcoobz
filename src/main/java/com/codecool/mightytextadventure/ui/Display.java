@@ -12,20 +12,24 @@ public class Display {
     System.out.println(message);
   }
 
-  public void printAreaDescription(String description) { // from Area
-    System.out.println("\nNARRATOR: " + description);
+  public void printAreaDescription(String description) {
+    printSeparator();
+    printMessage("\nNARRATOR: " + description);
   }
 
   public void printWinMessage(Player player) {
-    System.out.println("CONGRATULATIONS " + player.getName() + "! YOU WIN!");
+    printSeparator();
+    printMessage("\nCONGRATULATIONS " + player.getName() + "! YOU WIN!");
   }
 
   public void printLoseMessage(Player player) {
-    System.out.println("\nGAME OVER! " + player.getName() + ", YOU HAVE LOST!");
+    printSeparator();
+    printMessage("\nGAME OVER! " + player.getName() + ", YOU HAVE LOST!");
   }
 
   public void printAvailableActions(List<String> actions) {
-    System.out.println("\nAvailable actions:");
+    printActionSeparator();
+    printMessage("\nWhat will you do:");
     int index = 1;
     for (String action : actions) {
       System.out.println(index + ". " + action);
@@ -34,10 +38,19 @@ public class Display {
   }
 
   public void printInvalidAction() {
-    System.out.println("Invalid action! Try again.");
+    printInvalidSeparator();
+    printMessage("Invalid action! Try again.");
   }
 
   public void printSeparator() {
-    System.out.println("------------------------------");
+    printMessage("\n------------------------------");
+  }
+
+  public void printActionSeparator() {
+    printMessage("\n*****");
+  }
+
+  public void printInvalidSeparator() {
+    printMessage("\n>>>>> !!!");
   }
 }
