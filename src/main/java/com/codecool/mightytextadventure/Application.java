@@ -40,23 +40,17 @@ public class Application {
     AreaDescription.loadWayToForrest(areas);
     AreaDescription.loadForrestEnter(areas);
     AreaDescription.loadForrestDirections(areas);
-
-    // winning area
-    AreaDescription.loadFindFang(areas);
-    // loosing area
-    AreaDescription.loadGameOver(areas);
+    AreaDescription.loadFindFang(areas); // winning area
+    AreaDescription.loadGameOver(areas); // loosing area
 
     return areas;
   }
 
   private static void setupAreaConnections(Map<AreaName, Area> areas) {
-
     AreaConnections.setupStart(areas);
     AreaConnections.setupHutInside(areas);
     AreaConnections.setupWayToForrest(areas);
     AreaConnections.setupForrestEnter(areas);
     AreaConnections.setupForrestDirections(areas);
-
   }
-
 }
