@@ -6,6 +6,11 @@ import com.codecool.mightytextadventure.data.AreaName;
 import java.util.Map;
 
 public class GameOver {
+
+  // private constructor to prevent instantiation
+  private GameOver() {
+    throw new AssertionError("Cannot instantiate WayToForrest class");
+  }
   public static void loadGameOverRoom(Map<AreaName, Area> areas) {
     areas.put(AreaName.GAME_OVER, new Area(AreaName.GAME_OVER, """
         Your journey has reached an unexpected crossroads.

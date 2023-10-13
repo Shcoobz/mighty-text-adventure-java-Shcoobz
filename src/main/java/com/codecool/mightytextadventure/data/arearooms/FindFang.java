@@ -7,6 +7,11 @@ import java.util.Map;
 
 public class FindFang {
 
+  // private constructor to prevent instantiation
+  private FindFang() {
+    throw new AssertionError("Cannot instantiate WayToForrest class");
+  }
+
   public static void loadFindFangRoom(Map<AreaName, Area> areas) {
     areas.put(AreaName.FIND_FANG, new Area(AreaName.FIND_FANG, """
         In the depths of the Forbidden Forest, where the trees were ancient and the sunlight scarce, you heard a faint

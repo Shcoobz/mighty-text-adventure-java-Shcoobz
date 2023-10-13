@@ -7,6 +7,11 @@ import java.util.Map;
 
 public class HutInside {
 
+  // private constructor to prevent instantiation
+  private HutInside() {
+    throw new AssertionError("Cannot instantiate WayToForrest class");
+  }
+
   public static void loadHutInsideRoom(Map<AreaName, Area> areas) {
     areas.put(AreaName.HUT_INSIDE, new Area("""
         'Hagrid, it's me!'

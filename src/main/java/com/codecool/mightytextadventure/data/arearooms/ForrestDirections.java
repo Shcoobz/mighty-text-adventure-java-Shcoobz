@@ -9,6 +9,11 @@ import java.util.Random;
 
 public class ForrestDirections {
 
+  // private constructor to prevent instantiation
+  private ForrestDirections() {
+    throw new AssertionError("Cannot instantiate WayToForrest class");
+  }
+
   public static void loadForrestDirectionsRoom(Map<AreaName, Area> areas) {
     Map<AreaName, String[]> forestDescriptions = new HashMap<>();
 

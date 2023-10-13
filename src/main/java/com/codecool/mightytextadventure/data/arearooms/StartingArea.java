@@ -7,6 +7,11 @@ import java.util.Map;
 
 public class StartingArea {
 
+  // private constructor to prevent instantiation
+  private StartingArea() {
+    throw new AssertionError("Cannot instantiate WayToForrest class");
+  }
+
   public static void loadStartingArea(Map<AreaName, Area> areas) {
     areas.put(AreaName.STARTING_AREA, new Area("""
         On the muddy path, Hagrid's rustic hut stands prominently, its patchwork roof contrasting the overcast sky. Rain gently
