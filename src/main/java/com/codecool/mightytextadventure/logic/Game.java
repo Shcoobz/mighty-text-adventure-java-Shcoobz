@@ -30,15 +30,9 @@ public class Game {
     while (isRunning) {
       display.printAreaDescription(player.getActualArea().getDescription());
 
-      if (AreaName.GAME_OVER.equals(player.getActualArea().getAreaName())) {
-        display.printLoseMessage(player);
-        isRunning = false;
-        return;
-      }
+      checkGameOverOrWin();
 
-      if (AreaName.FIND_FANG.equals(player.getActualArea().getAreaName())) {
-        display.printWinMessage(player);
-        isRunning = false;
+      if (!isRunning) {
         return;
       }
 
@@ -51,20 +45,10 @@ public class Game {
   private void waitForUserInput() {
     display.printAvailableActions(player.getActualArea().getAvailableActions());
     String userInput = input.getInputFromUser().toLowerCase();
-
     List<String> availableActions = player.getActualArea().getAvailableActions();
-    String chosenAction = null;
+    String chosenAction = getChosenAction(userInput, availableActions);
 
-    // check if user input is a number and maps to an action
-    try {
-      int actionIndex = Integer.parseInt(userInput) - 1; // convert to 0-based index
-      if (actionIndex >= 0 && actionIndex < availableActions.size()) {
-        chosenAction = availableActions.get(actionIndex);
-      }
-    } catch (NumberFormatException e) {
-      // not a number, ignore and continue
-    }
-
+    // create method for handleUserInput
     switch (userInput) {
       case "quit":
         display.printLoseMessage(player);
@@ -92,21 +76,6 @@ public class Game {
         }
         break;
     }
-
-/*    if (userInput.equals("quit")) {
-      display.printLoseMessage(player);
-      isRunning = false;
-    } else if (chosenAction != null) {
-      Area nextArea = player.getActualArea().getAreaForAction(chosenAction);
-
-      if (nextArea != null) {
-        player.setActualArea(nextArea);
-      } else {
-        display.printInvalidAction();
-      }
-    } else {
-      display.printInvalidAction();
-    }*/
 
     /*-----------Determine player and enemy for battle---------------*/
     EnemyType enemyType = EnemyType.randomEnemyName();
@@ -137,4 +106,28 @@ public class Game {
       }
     }
   }
+
+  private String getChosenAction(String userInput, List<String> availableActions) {
+    try {
+      int actionIndex = Integer.parseInt(userInput) - 1; // convert to 0-based index
+      if (actionIndex >= 0 && actionIndex < availableActions.size()) {
+        return availableActions.get(actionIndex);
+      }
+    } catch (NumberFormatException e) {
+      // not a number, ignore and continue
+    }
+    return null;
+  }
+
+  private void checkGameOverOrWin() {
+    if (AreaName.GAME_OVER.equals(player.getActualArea().getAreaName())) {
+      display.printLoseMessage(player);
+      isRunning = false;
+    } else if (AreaName.FIND_FANG.equals(player.getActualArea().getAreaName())) {
+      display.printWinMessage(player);
+      isRunning = false;
+    }
+  }
+
+
 }

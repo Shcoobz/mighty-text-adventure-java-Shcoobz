@@ -13,7 +13,6 @@ import java.util.Map;
 import java.util.EnumMap;
 
 // TODO: implement back option
-// TODO: refactor textblock to new format
 
 public class Application {
   public static void main(String[] args) {
