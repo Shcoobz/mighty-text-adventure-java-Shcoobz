@@ -41,7 +41,7 @@ public class Game {
                         case 3:
                             boolean playerWon = battle.determinePlayerAndEnemy(this);
                             if (playerWon) {
-                                System.out.println("test for playerwon");
+                                player.addAPotion();
                             }
                             break;
                     }
@@ -85,7 +85,7 @@ public class Game {
             case "battle":
                 boolean playerWon = battle.determinePlayerAndEnemy(this);
                 if (playerWon) {
-                    System.out.println("test for playerwon");
+                    player.addAPotion();
                 }
                 int playerHP = player.getHP();
                 if (playerHP == 0) {

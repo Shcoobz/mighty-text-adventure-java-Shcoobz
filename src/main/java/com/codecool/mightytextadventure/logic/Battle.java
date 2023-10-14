@@ -30,8 +30,6 @@ public class Battle {
                     display.printMessage("--->>> the remaining potions are : " + Integer.toString(potionNumber) + " pieces");
                 }
             }
-
-
             /*------------ Spieler greift den Gegner an ----------*/
             enemy.takeDamage(playerDamage);
             display.printMessage(player.getName() + " greift " + enemy.getName() + " an und fügt " + playerDamage + " Schaden zu.");
