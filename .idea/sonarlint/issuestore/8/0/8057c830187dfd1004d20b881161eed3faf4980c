@@ -1,0 +1,6 @@
+
+f	java:S117
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô—Ñ¯
+b	java:S116"MRename this field "HP" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò°ó“
+b
+java:S1128"LRemove this unused import 'com.codecool.mightytextadventure.data.EnemyType'.(ò¦¬•

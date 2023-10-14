@@ -5,15 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="491e2c1f-e524-482f-bf71-df4667589932" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/data/arearooms/Room.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/8/081ddc7931a518e3a70ee6661076d27f61edb27d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/9/091efa4c9e23daa3913cf8a70fd247010bc6b2f0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0f894e4ff680d4d99137d43cff08d7b81aecfb51" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/9/19dc50e9737cabe4f059f63f97df791d5d93c3bd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/2/228c8268a86fa0691d6af59961094ed878466742" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/b/3b0782b39d4631a899677dd81fc54d76d5dc0632" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/b/3b19f02cdd1362de70504881c5dcfec56fc09b60" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/4/547eb31c4973602daa8c45ae19ee540a199c2175" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/7/575b7f0e36006831c185d8e25e30075e33912d4d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/4/64b9db5a02d61167c6ba8e28915f3696e4d4fee1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/0/8057c830187dfd1004d20b881161eed3faf4980c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f01e7d980cfd1078bf9d220f85ee1c0025bddae0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/4/f4e2659342b4dbccb3fa4384f40fdd1b8577d81f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/c/fcbdc64ac2e650d578966cb946a41459863226aa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/8/081ddc7931a518e3a70ee6661076d27f61edb27d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/9/091efa4c9e23daa3913cf8a70fd247010bc6b2f0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/f/0f894e4ff680d4d99137d43cff08d7b81aecfb51" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/9/19dc50e9737cabe4f059f63f97df791d5d93c3bd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/2/228c8268a86fa0691d6af59961094ed878466742" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/b/3b0782b39d4631a899677dd81fc54d76d5dc0632" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/b/3b19f02cdd1362de70504881c5dcfec56fc09b60" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/4/547eb31c4973602daa8c45ae19ee540a199c2175" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/7/575b7f0e36006831c185d8e25e30075e33912d4d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/4/64b9db5a02d61167c6ba8e28915f3696e4d4fee1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/0/8057c830187dfd1004d20b881161eed3faf4980c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/0/f01e7d980cfd1078bf9d220f85ee1c0025bddae0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/4/f4e2659342b4dbccb3fa4384f40fdd1b8577d81f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/c/fcbdc64ac2e650d578966cb946a41459863226aa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/logic/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/logic/Battle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/logic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/logic/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/logic/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/logic/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/mightytextadventure/logic/Battle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/mightytextadventure/logic/Battle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/mightytextadventure/logic/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/mightytextadventure/logic/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/mightytextadventure/logic/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/mightytextadventure/logic/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/data/Area.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/data/Area.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/data/AreaConnections.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/data/AreaDescription.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/data/arearooms/FindFang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/data/arearooms/ForrestDirections.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/data/arearooms/ForrestEnter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/data/arearooms/GameOver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/data/arearooms/HutInside.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/data/arearooms/Room.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/data/arearooms/StartingArea.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/data/arearooms/WayToForrest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,10 +71,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2WkIN9yjZImfCXC9BfGxQIQF39J" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -47,6 +85,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "development",
     "last_opened_file_path": "/media/shared/00.laptop_coding/studies/codeCool/01.modules/03.OOP/OOP_TEAM/01.Week/mighty-text-adventure-java-Shcoobz",
@@ -86,7 +125,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1697270112662</updated>
-      <workItem from="1697270113636" duration="7937000" />
+      <workItem from="1697270113636" duration="7984000" />
+      <workItem from="1697292261308" duration="1204000" />
     </task>
     <servers />
   </component>
