@@ -1,15 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="491e2c1f-e524-482f-bf71-df4667589932" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/data/arearooms/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/logic/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/logic/Battle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/logic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/logic/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/logic/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/mightytextadventure/logic/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/mightytextadventure/logic/Battle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/mightytextadventure/logic/Battle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/mightytextadventure/logic/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/mightytextadventure/logic/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/mightytextadventure/logic/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/mightytextadventure/logic/Player.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2WkIN9yjZImfCXC9BfGxQIQF39J" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;last_opened_file_path&quot;: &quot;/media/shared/00.laptop_coding/projects/JAVA&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "development",
+    "last_opened_file_path": "/media/shared/00.laptop_coding/studies/codeCool/01.modules/03.OOP/OOP_TEAM/01.Week/mighty-text-adventure-java-Shcoobz",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.codecool.mightytextadventure.Application" />
@@ -29,5 +77,20 @@
         <item itemvalue="Application.Application" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="491e2c1f-e524-482f-bf71-df4667589932" name="Changes" comment="" />
+      <created>1697270112662</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1697270112662</updated>
+      <workItem from="1697270113636" duration="7937000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>

@@ -6,7 +6,7 @@ public class Player {
     private String name;
     private int HP = 100;
     private boolean magicWand = true;
-    private int potion = 0;
+    private int potion = 15;
     private Area actualArea;
     private int attackStrength;
 

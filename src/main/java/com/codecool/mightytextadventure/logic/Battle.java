@@ -5,6 +5,8 @@ import com.codecool.mightytextadventure.data.AreaName;
 import com.codecool.mightytextadventure.data.EnemyType;
 import com.codecool.mightytextadventure.ui.Display;
 
+// TODO: add win/lose condition
+// TODO: remove display&description of area from determinePlayerAndEnemy()
 public class Battle {
     private Player player;
     private Enemy enemy;
@@ -46,6 +48,7 @@ public class Battle {
             display.printLoseMessage(player);
         } else {
             display.printWinMessage(player);
+            return true;
         }
         return false;
     }
@@ -62,8 +65,19 @@ public class Battle {
 
         if (playerWon) {
             battlesWon++;
-            if (battlesWon >= 3) {
-                player.setActualArea(new Area(AreaName.FIND_FANG, "Find Fang Description"));
+            if (battlesWon == 3) {
+                player.setActualArea(new Area(AreaName.FIND_FANG, """
+        In the depths of the Forbidden Forest, where the trees were ancient and the sunlight scarce, you heard a faint
+        whimper. Following the sound, you discovered a small sunlit clearing where Fang lay, bruised and muddied but mostly
+        unharmed. As you approached, his tail wagged weakly, eyes full of relief. After a brief check and reassuring words, you and
+        Fang began your journey back to Hagrid, the forest now feeling less daunting with the loyal dog by your side.
+
+        Hagrid could not believe his eyes and was beaming with joy!
+        """));
+                Display display = new Display();
+                display.printAreaDescription(player.getActualArea().getDescription());
+                game.endGame(); // winGame && loseGame
+
                 return true;
             }
         }
