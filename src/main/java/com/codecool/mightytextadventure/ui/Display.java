@@ -42,12 +42,14 @@ public class Display {
     printMessage("                              |_|     \\___| /_/\\_\\  \\__|");
     printMessage("                                                           ");
     printMessage("                                                           ");
-    printMessage("                                                           _                          _   ");
-    printMessage("                                               /\\         | |                        | |  ");
-    printMessage("                                              /  \\      __| | __   __   ___   _ __   | |_ ");
-    printMessage("                                             / /\\ \\    / _` | \\ \\ / /  / _ \\ | '_ \\  | __|");
-    printMessage("                                            / ____ \\  | (_| |  \\ V /  |  __/ | | | | | |_ ");
-    printMessage("                                           /_/    \\_\\  \\__,_|   \\_/    \\___| |_| |_|  \\__|");
+    printMessage("                                               /\\         | |                        | |                        ");
+    printMessage("                                              /  \\      __| | __   __   ___   _ __   | |_   _   _   _ __    ___ ");
+    printMessage("                                             / /\\ \\    / _` | \\ \\ / /  / _ \\ | '_ \\  | __| | | | | | '__|  / _ \\");
+    printMessage("                                            / ____ \\  | (_| |  \\ V /  |  __/ | | | | | |_  | |_| | | |    |  __/");
+    printMessage("                                           /_/    \\_\\  \\__,_|   \\_/    \\___| |_| |_|  \\__|  \\__,_| |_|     \\___|");
+    printMessage("                                                                                                                ");
+    printMessage("                                                                                                                ");
+
   }
 
   /**
