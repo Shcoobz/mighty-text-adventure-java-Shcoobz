@@ -19,12 +19,12 @@ Mighty Text Adventure is a thrilling text-based role-playing game set in a magic
 
 ## Task Division
 
-### AdrianMonemi:
+### [Adrian Monemi](https://github.com/AdrianMonemi):
 - **Player Mechanics**: Implemented the logic for player attributes such as health points, potions, and attack strength. Also handled the effects of items like the magic wand on player stats.
 - **Game Logic**: Developed the core game loop including area exploration, player progression, and state management.
 - **Battle Logic**: Crafted the battle system, allowing players to engage in combat with enemies, using a blend of strategy and resource management.
 
-### Shcoobz:
+### [Shcoobz](https://github.com/Shcoobz): 
 - **User Interface**: Designed and implemented the text-based user interface using Java's Scanner class. Ensured clear user feedback and intuitive command input.
 - **Area Design**: Created and described various game areas, setting the scene for player exploration and interaction.
 - **Game Details**: Fine-tuned game elements like story details, help messages, and area connections to ensure a cohesive and engaging player experience.
