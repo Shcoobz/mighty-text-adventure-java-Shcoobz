@@ -10,7 +10,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-// TODO: checkGoOrWin() make two methods
+/**
+ * Represents the main game logic for the Mighty Text Adventure game.
+ * This class is responsible for managing the game loop, handling user input,
+ * updating game state, and coordinating between different components like
+ * player, battle, and display.
+ */
 public class Game {
   private final Map<AreaName, Area> areas;
   private final Input input;
@@ -19,6 +24,14 @@ public class Game {
   private Battle battle;
   boolean isRunning = true;
 
+  /**
+   * Constructs a Game instance with specified areas, input, display, and player.
+   *
+   * @param areas A map linking AreaName to Area objects.
+   * @param input An Input object for handling user input.
+   * @param display A Display object for showing information to the user.
+   * @param player The player of the game.
+   */
   public Game(Map<AreaName, Area> areas, Input input, Display display, Player player) {
     this.areas = areas;
     this.input = input;
@@ -27,6 +40,10 @@ public class Game {
     this.battle = new Battle(player, null);
   }
 
+  /**
+   * Starts and manages the game loop. This method keeps the game running,
+   * presenting options to the player, and updating game states based on player actions.
+   */
   public void run() {
 
     while (isRunning) {
@@ -59,10 +76,19 @@ public class Game {
     }
   }
 
+  /**
+   * Ends the game by setting the running flag to false.
+   */
   public void endGame() {
     isRunning = false;
   }
 
+  /**
+   * Checks if the player is currently in a battle area.
+   *
+   * @param currentArea The current area of the player.
+   * @return true if the player is in a battle area, false otherwise.
+   */
   private boolean isPlayerInBattleArea(AreaName currentArea) {
     return currentArea != null && (currentArea.equals(AreaName.F_WEST) ||
         currentArea.equals(AreaName.F_EAST) ||
@@ -70,6 +96,9 @@ public class Game {
         currentArea.equals(AreaName.F_NORTH));
   }
 
+  /**
+   * Waits for and processes user input during the game.
+   */
   private void waitForUserInput() {
     display.printAvailableActions(player.getActualArea().getAvailableActions());
     String userInput = input.getInputFromUser().toLowerCase();
@@ -112,11 +141,23 @@ public class Game {
     }
   }
 
+  /**
+   * Rolls a dice to generate a random number between 1 and 6.
+   *
+   * @return A random number between 1 and 6.
+   */
   private int rollDice() {
     Random random = new Random();
     return random.nextInt(6) + 1;
   }
 
+  /**
+   * Determines the chosen action based on user input.
+   *
+   * @param userInput The input provided by the user.
+   * @param availableActions A list of available actions.
+   * @return The chosen action based on user input, or null if the input is invalid.
+   */
   private String getChosenAction(String userInput, List<String> availableActions) {
     try {
       int actionIndex = Integer.parseInt(userInput) - 1; // convert to 0-based index
@@ -129,6 +170,9 @@ public class Game {
     return null;
   }
 
+  /**
+   * Checks the game's victory or defeat conditions.
+   */
   private void checkGameOverOrWin() {
     if (AreaName.GAME_OVER.equals(player.getActualArea().getAreaName())) {
       display.printLoseMessage(player);

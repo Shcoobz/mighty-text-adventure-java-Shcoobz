@@ -1,5 +1,8 @@
 package com.codecool.mightytextadventure.data;
 
+/**
+ * Enumeration of area names used in the game.
+ */
 public enum AreaName {
   STARTING_AREA,
   SA_KNOCK,
@@ -25,5 +28,4 @@ public enum AreaName {
   F_WEST,
   FIND_FANG,
   GAME_OVER,
-
 }

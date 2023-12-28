@@ -1,43 +1,56 @@
 package com.codecool.mightytextadventure.ui;
 
-import com.codecool.mightytextadventure.logic.Player;
-
 import java.util.Scanner;
 
+/**
+ * Manages user input for the game. This class handles reading input from the console,
+ * processing it, and providing the necessary information back to the game.
+ */
 public class Input {
   private Scanner scanner;
+  Display display = new Display();
 
+  /**
+   * Constructs an Input instance. Initializes the scanner to read from the standard input stream.
+   */
   public Input() {
     this.scanner = new Scanner(System.in);
   }
 
+  /**
+   * Reads input from the user, trims it, and converts it to lowercase. If the user inputs 'help' or 'h',
+   * the method displays help information and then requests input again.
+   *
+   * @return The processed user input as a lowercase string.
+   */
   public String getInputFromUser() {
     String input = scanner.nextLine().trim();
 
-    // make input case-insensitive by converting it to lowercase
     input = input.toLowerCase();
 
-    // check for 'help' or 'h' & provide the help information
     if ("help".equals(input) || "h".equals(input)) {
       displayHelp();
-      return getInputFromUser(); // after displaying help, ask for input again
+      return getInputFromUser();
     }
 
     return input;
   }
 
+  /**
+   * Prompts the user to enter their name and reads the input.
+   *
+   * @return The name entered by the user.
+   */
   public String getNameFromUser() {
-    System.out.println("\nYour name: ");
+    display.printUserName();
     String name = scanner.nextLine();
     return name;
   }
 
+  /**
+   * Displays help information to the user, outlining various commands and their effects.
+   */
   private void displayHelp() {
-    System.out.println("HELP INFORMATION:");
-    System.out.println("-----------------");
-    System.out.println("Typing 'quit' to exit the game at anytime (progress wil not be saved).");
-    System.out.println("Typing 'battle' will start a battle immediately.");
-    System.out.println("Typing 'woods' will skip most of teh story and teleport you to the forrest entrance.");
-    System.out.println("Typing 'win' will instantly win the game.");
+    display.printHelp();
   }
 }

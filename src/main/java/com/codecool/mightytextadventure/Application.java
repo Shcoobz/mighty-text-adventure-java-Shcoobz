@@ -10,16 +10,25 @@ import com.codecool.mightytextadventure.ui.Input;
 import java.util.Map;
 import java.util.EnumMap;
 
-// TODO: implement back option
-// TODO: move message to display
-
+/**
+ * The main class of the Mighty Text Adventure game. It is responsible for initializing the game,
+ * setting up the necessary components, and starting the game loop.
+ */
 public class Application {
 
+  /**
+   * The entry point of the application. It sets up the game and starts the game loop.
+   *
+   * @param args Command line arguments.
+   */
   public static void main(String[] args) {
     Display display = new Display();
     Input input = new Input();
 
-    display.printMessage("\nStarting Mighty Text Adventure by >>> Master JAVA <<<!");
+    display.printLogo();
+    display.printWelcomeMsg();
+
+    display.printMessage("\nGame created by Team >>> Master JAVA <<<!");
     display.printMessage("\nType 'h' for a help message.");
 
     Map<AreaName, Area> areas = loadAreas();
@@ -32,6 +41,11 @@ public class Application {
 
   }
 
+  /**
+   * Loads the areas of the game into a map.
+   *
+   * @return A map linking AreaName to Area objects.
+   */
   private static Map<AreaName, Area> loadAreas() {
     Map<AreaName, Area> areas = new EnumMap<>(AreaName.class);
 
@@ -40,6 +54,11 @@ public class Application {
     return areas;
   }
 
+  /**
+   * Sets up connections between different areas in the game.
+   *
+   * @param areas The map of areas where connections need to be set up.
+   */
   private static void setupAreaConnections(Map<AreaName, Area> areas) {
     Area.setupAreaConnections(areas);
   }

@@ -2,6 +2,10 @@ package com.codecool.mightytextadventure.data;
 
 import java.util.*;
 
+/**
+ * Represents an area in a text-based adventure game.
+ * An area is defined by its name, description, and connections to other areas.
+ */
 public class Area {
   private AreaName areaName;
   private final String description;
@@ -13,37 +17,72 @@ public class Area {
   public static final String SOUTH = "[Go South]";
   public static final String WEST = "[Go West]";
 
+  /**
+   * Gets the name of the area.
+   * @return The name of the area.
+   */
   public AreaName getAreaName() {
     return this.areaName;
   }
 
+  /**
+   * Constructor for creating an area with only a description.
+   * @param description The description of the area.
+   */
   public Area(String description) {
     this.description = description;
     this.connectedAreas = new HashMap<>();
   }
 
+  /**
+   * Constructor for creating an area with a name and a description.
+   * @param areaName The name of the area.
+   * @param description The description of the area.
+   */
   public Area(AreaName areaName, String description) {
     this.areaName = areaName;
     this.description = description;
     this.connectedAreas = new HashMap<>();
   }
 
+  /**
+   * Gets the description of the area.
+   * @return The description of the area.
+   */
   public String getDescription() {
     return description;
   }
 
+  /**
+   * Adds a connection from this area to another area.
+   * @param action The action that leads to the destination area.
+   * @param destination The area to connect to.
+   */
   public void addConnection(String action, Area destination) {
     connectedAreas.put(action, destination);
   }
 
+  /**
+   * Gets the area associated with a given action.
+   * @param action The action to get the area for.
+   * @return The area associated with the given action.
+   */
   public Area getAreaForAction(String action) {
     return connectedAreas.get(action);
   }
 
+  /**
+   * Gets a list of available actions in this area.
+   * @return A list of actions.
+   */
   public List<String> getAvailableActions() {
     return new ArrayList<>(connectedAreas.keySet());
   }
 
+  /**
+   * Loads all predefined areas into the provided map.
+   * @param areas The map to load the areas into.
+   */
   public static void loadAllAreas(Map<AreaName, Area> areas) {
     areas.put(AreaName.STARTING_AREA, new Area("""
         On the muddy path, Hagrid's rustic hut stands prominently, its patchwork roof contrasting the overcast sky. Rain gently
@@ -198,16 +237,24 @@ public class Area {
         "Heading west, the scent of pine grows, with the ground hinting at foothills and rustling leaves implying hidden\n" +
             "inhabitants."
     });
-
-
   }
 
+  /**
+   * Randomly selects a description for a given direction.
+   * @param descriptions The map containing descriptions.
+   * @param direction The direction for which to get a description.
+   * @return A randomly selected description.
+   */
   private static String getRandomDescription(Map<AreaName, String[]> descriptions, AreaName direction) {
     String[] descArray = descriptions.get(direction);
     Random rand = new Random();
     return descArray[rand.nextInt(descArray.length)];
   }
 
+  /**
+   * Sets up connections between all predefined areas.
+   * @param areas The map containing all areas.
+   */
   public static void setupAreaConnections(Map<AreaName, Area> areas) {
     // ========== STARTING AREA ==========
     areas.get(AreaName.STARTING_AREA).addConnection("[Knock]", areas.get(AreaName.SA_KNOCK));
@@ -291,6 +338,5 @@ public class Area {
     areas.get(AreaName.F_WEST).addConnection(EAST, areas.get(AreaName.F_EAST));
     areas.get(AreaName.F_WEST).addConnection(SOUTH, areas.get(AreaName.F_SOUTH));
     areas.get(AreaName.F_WEST).addConnection(WEST, areas.get(AreaName.F_WEST));
-
   }
 }
