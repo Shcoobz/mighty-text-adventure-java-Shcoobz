@@ -247,6 +247,11 @@ public class Area {
    */
   private static String getRandomDescription(Map<AreaName, String[]> descriptions, AreaName direction) {
     String[] descArray = descriptions.get(direction);
+
+    if (descArray == null || descArray.length == 0) {
+      return "No description available.";
+    }
+
     Random rand = new Random();
     return descArray[rand.nextInt(descArray.length)];
   }

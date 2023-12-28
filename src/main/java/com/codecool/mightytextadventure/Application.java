@@ -38,7 +38,6 @@ public class Application {
     game.run();
 
     display.printMessage("\nExiting from Mighty Text Adventure!");
-
   }
 
   /**
