@@ -3,8 +3,10 @@ package com.codecool.mightytextadventure.logic;
 import com.codecool.mightytextadventure.data.Area;
 
 /**
- * Represents the player in the game. This class holds the player's attributes such as name, health points (HP),
- * possession of a magic wand, number of potions, current area, and attack strength.
+ * Represents the player in the game. This class holds the player's attributes
+ * such as name, health points (HP),
+ * possession of a magic wand, number of potions, current area, and attack
+ * strength.
  */
 public class Player {
   private String name;
@@ -90,7 +92,8 @@ public class Player {
   }
 
   /**
-   * Reduces the player's HP by the specified damage amount. Ensures the HP does not drop below zero.
+   * Reduces the player's HP by the specified damage amount. Ensures the HP does
+   * not drop below zero.
    *
    * @param damage The amount of damage to inflict on the player.
    */
@@ -112,7 +115,8 @@ public class Player {
 
   /**
    * Heals the player using a potion if available, increasing the player's HP.
-   * A potion is only used if the player's HP is below 60 and if potions are available.
+   * A potion is only used if the player's HP is below 60 and if potions are
+   * available.
    */
   public void healWithPotion() {
     if (potion > 0 && HP < 60) {

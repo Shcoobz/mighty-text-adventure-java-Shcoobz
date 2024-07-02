@@ -1,7 +1,5 @@
 package com.codecool.mightytextadventure.logic;
 
-import com.codecool.mightytextadventure.data.EnemyType;
-
 /**
  * Represents an enemy in the game.
  * This class encapsulates the attributes and behaviors of an enemy,
@@ -13,7 +11,8 @@ public class Enemy {
   private int attackStrength;
 
   /**
-   * Constructs an Enemy instance with a specified name, health points, and attack strength.
+   * Constructs an Enemy instance with a specified name, health points, and attack
+   * strength.
    *
    * @param name           The name of the enemy.
    * @param HP             The health points of the enemy.
@@ -65,4 +64,3 @@ public class Enemy {
     }
   }
 }
-

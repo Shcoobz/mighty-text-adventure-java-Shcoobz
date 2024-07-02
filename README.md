@@ -1,4 +1,4 @@
-# basicJava_Mighty Text Adventure: [LIVE DEMO](<[Link](https://replit.com/@shcoobz/basicJava-mighty-text-adventure)>)
+# basicJava_Mighty Text Adventure: [LIVE DEMO](https://replit.com/@shcoobz/basicJava-mighty-text-adventure)
 
 ![Mighty Text Adventure](src/main/resources/img/mighty-text-adventure.png)
 
